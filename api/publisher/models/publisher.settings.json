@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "publishers",
+  "info": {
+    "name": "Publisher"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "books": {
+      "via": "publisher",
+      "collection": "book"
+    }
+  }
+}

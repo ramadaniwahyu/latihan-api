@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "books",
+  "info": {
+    "name": "Book"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "year": {
+      "type": "integer"
+    },
+    "author": {
+      "model": "author",
+      "via": "books"
+    },
+    "publisher": {
+      "model": "publisher",
+      "via": "books"
+    }
+  }
+}
